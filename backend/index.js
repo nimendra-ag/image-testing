@@ -51,6 +51,10 @@ const Image = mongoose.model('Image', ImageSchema);
 // Middleware to parse JSON
 app.use(express.json());
 
+app.get("/", (req, res)=>{
+  res.json("Hello");
+})
+
 // Upload route
 app.post('/upload', upload.single('image'), async (req, res) => {
   try {
