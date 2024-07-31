@@ -5,7 +5,7 @@ const ImageGallery = () => {
   const [images, setImages] = useState([]);
 
   const fetchImages = async () => {
-    const response = await fetch('http://localhost:5000/images',{
+    const response = await fetch('https://image-testing-xi.vercel.app/images',{
       method: 'GET'
     });
     const data = await response.json();

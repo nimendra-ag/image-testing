@@ -12,7 +12,7 @@ const ImageUpload = () => {
     const formData = new FormData();
     formData.append('image', image);
 
-    const response = await fetch('http://localhost:5000/upload', {
+    const response = await fetch('https://image-testing-xi.vercel.app/upload', {
       method: 'POST',
       body: formData,
     });

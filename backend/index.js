@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(cors(
   {
-    origin: true,
+    origin: ["https://image-testing-xi.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true
   }
