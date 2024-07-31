@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(cors(
   {
-    origin: ["https://image-testing-xi.vercel.app/"],
+    origin: [""],
     methods: ["POST", "GET"],
     credentials: true
   }
@@ -37,10 +37,7 @@ const storage = new CloudinaryStorage({
 const upload = multer({ storage });
 
 // MongoDB configuration
-mongoose.connect("mongodb+srv://nimendrare4534:nimendrare4534inmongoatlas@cluster0.j74i3f2.mongodb.net/deploy-testing", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  });
+mongoose.connect("mongodb+srv://nimendrare4534:nimendrare4534inmongoatlas@cluster0.j74i3f2.mongodb.net/deploy-testing");
 
 const ImageSchema = new mongoose.Schema({
   url: String,
