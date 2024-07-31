@@ -31,7 +31,10 @@ const storage = new CloudinaryStorage({
 const upload = multer({ storage });
 
 // MongoDB configuration
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect("mongodb+srv://nimendrare4534:nimendrare4534inmongoatlas@cluster0.j74i3f2.mongodb.net/deploy-testing", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  });
 
 const ImageSchema = new mongoose.Schema({
   url: String,
